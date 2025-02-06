@@ -1,17 +1,33 @@
-const btn_noakhali = document.getElementById("donate_btn_Noakhali");
-btn_noakhali.addEventListener("click", function(){
-const stringDonatAmountForNoakhali = (btn_noakhali.parentElement.parentElement.children[3].childNodes[1].value);
-const donatAmountForNoakhali = parseFloat(stringDonatAmountForNoakhali);
-if(donatAmountForNoakhali < 0 || isNaN(donatAmountForNoakhali) == true){
-    return;
-}
-const stringFundForNoakhali = (btn_noakhali.parentElement.parentElement.children[0].childNodes[3].innerText.split(" ")[0]);
-const fundForNoakhali = parseFloat(stringFundForNoakhali);
-console.log(fundForNoakhali, typeof fundForNoakhali);
-console.log(donatAmountForNoakhali);
+const fundButtonNoakhali = document.getElementById("donate_btn_Noakhali");
+fundButtonNoakhali.addEventListener("click", function(){
+    
+    const donateAmountForNoakhali =  getInputFieldValueById('inputDonateNoakhali');
+    
+    if(donateAmountForNoakhali < 1 || isNaN(donateAmountForNoakhali) == true){
+        return;
+    }
+    console.log(donateAmountForNoakhali, typeof donateAmountForNoakhali);
+    let fundAmountNoakhali = getFundAmountById("totalFundNoakhali");
+   
+    
+    let centralBalanceString = document.getElementById("centralBalance").innerText;
+    let centralBalance = parseFloat(centralBalanceString);
+    centralBalance = centralBalance - donateAmountForNoakhali;
+    document.getElementById("centralBalance").innerText = centralBalance;
+    if(donateAmountForNoakhali > centralBalance){
+        alert("you do not have sufficient balance. You have to pay negative amount to you bank.")
+       
+    }
 
-const stringbalance =  document.getElementById("centralBalance").innerText;
-const balance = parseFloat(stringbalance);
-console.log(balance);
+    fundAmountNoakhali = fundAmountNoakhali + donateAmountForNoakhali;
+    document.getElementById("totalFundNoakhali").innerText = fundAmountNoakhali; //calculate fundMoney
+
 })
 
+const historyButton = document.getElementById("btn-history");
+historyButton.addEventListener("click", function(){
+    // History_section
+    // document.getElementById("history_section").classList.remove("hidden");
+    // document.getElementById("homeSection").classList.add("hidden")
+    
+})
