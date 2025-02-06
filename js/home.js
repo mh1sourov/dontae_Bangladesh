@@ -32,24 +32,24 @@ donateButtonNoakhali.addEventListener("click", function(){
     const historyDiv = document.getElementById("history_section");
     const div = document.createElement("div");
 
-    const now = new Date(); // Create a Date object!
+    const now = new Date(); 
 
-    const formattedDate = now.toLocaleDateString('en-US', { // Customize as needed
+    const formattedDate = now.toLocaleDateString('en-US', { 
         year: 'numeric',
         month: 'long',
         day: 'numeric'
     });
 
-    const formattedTime = now.toLocaleTimeString('en-US', { // Customize as needed
+    const formattedTime = now.toLocaleTimeString('en-US', { 
         hour: 'numeric',
         minute: 'numeric',
         second: 'numeric',
-        hour12: true // or false for 24-hour format
+        hour12: true 
     });
 
     div.innerHTML = `<div class="rounded-2xl border-2 border-gray-300 p-4 m-3">
               <h1 class = "text-xl font-bold">${donateAmountForNoakhali} Taka donated for flood in Noakhali</h1>
-              <p>Donated at ${formattedDate} ${formattedTime}</p> </div>`; // Use formatted date and time
+              <p>Donated at ${formattedDate} ${formattedTime}</p> </div>`; 
     historyDiv.appendChild(div);    
 
 })
@@ -106,24 +106,24 @@ donate_now_button_feni.addEventListener("click", function(){
     const historyDiv = document.getElementById("history_section");
     const div = document.createElement("div");
 
-    const now = new Date(); // Create a Date object!
+    const now = new Date(); 
 
-    const formattedDate = now.toLocaleDateString('en-US', { // Customize as needed
+    const formattedDate = now.toLocaleDateString('en-US', { 
         year: 'numeric',
         month: 'long',
         day: 'numeric'
     });
 
-    const formattedTime = now.toLocaleTimeString('en-US', { // Customize as needed
+    const formattedTime = now.toLocaleTimeString('en-US', { 
         hour: 'numeric',
         minute: 'numeric',
         second: 'numeric',
-        hour12: true // or false for 24-hour format
+        hour12: true 
     });
 
     div.innerHTML = `<div class="rounded-2xl border-2 border-gray-300 p-4 m-3">
               <h1 class = "text-xl font-bold">${donateAmountForFeni} Taka donated for flood in Feni</h1>
-              <p>Donated at ${formattedDate} ${formattedTime}</p> </div>`; // Use formatted date and time
+              <p>Donated at ${formattedDate} ${formattedTime}</p> </div>`; 
     historyDiv.appendChild(div);    
 
 })
@@ -166,24 +166,28 @@ donate_now_button_quotaMOvement.addEventListener("click", function(){
     const historyDiv = document.getElementById("history_section");
     const div = document.createElement("div");
 
-    const now = new Date(); // Create a Date object!
+    const now = new Date(); 
 
-    const formattedDate = now.toLocaleDateString('en-US', { // Customize as needed
+    const formattedDate = now.toLocaleDateString('en-US', {
         year: 'numeric',
         month: 'long',
         day: 'numeric'
     });
 
-    const formattedTime = now.toLocaleTimeString('en-US', { // Customize as needed
+    const formattedTime = now.toLocaleTimeString('en-US', {
         hour: 'numeric',
         minute: 'numeric',
         second: 'numeric',
-        hour12: true // or false for 24-hour format
+        hour12: true 
     });
 
     div.innerHTML = `<div class="rounded-2xl border-2 border-gray-300 p-4 m-3">
               <h1 class = "text-xl font-bold">${donteAmountForQuotaMovement} Taka donated for Quota Movement Bangladesh</h1>
-              <p>Donated at ${formattedDate} ${formattedTime}</p> </div>`; // Use formatted date and time
-    historyDiv.appendChild(div);    
-
+              <p>Donated at ${formattedDate} ${formattedTime}</p> </div>`; 
+    historyDiv.appendChild(div);
 })
+
+document.getElementById("btn_blog").addEventListener("click", function(){
+    window.location.href = "https://www.cafonline.org/personal-giving/resources/five-reasons-to-give-to-charity";
+})
+
