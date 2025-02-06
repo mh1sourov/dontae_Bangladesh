@@ -1,12 +1,19 @@
-const fundButtonNoakhali = document.getElementById("donate_btn_Noakhali");
-fundButtonNoakhali.addEventListener("click", function(){
+const donateButtonNoakhali = document.getElementById("donate_btn_Noakhali");
+donateButtonNoakhali.addEventListener("click", function(){
     
     const donateAmountForNoakhali =  getInputFieldValueById('inputDonateNoakhali');
     
     if(donateAmountForNoakhali < 1 || isNaN(donateAmountForNoakhali) == true){
         return;
     }
-    console.log(donateAmountForNoakhali, typeof donateAmountForNoakhali);
+
+    if(donateAmountForNoakhali > 0){
+        my_modal_4.showModal()
+     
+    }else{
+        return;
+    }
+    
     let fundAmountNoakhali = getFundAmountById("totalFundNoakhali");
    
     
@@ -73,6 +80,13 @@ donate_now_button_feni.addEventListener("click", function(){
     if(donateAmountForFeni < 1 || isNaN(donateAmountForFeni) == true){
         return;
     }
+
+    if(donateAmountForFeni > 0){
+        my_modal_4.showModal()
+     
+    }else{
+        return;
+    }
     
     let fundAmountFeni = getFundAmountById("totalFundFeni");
    
@@ -124,6 +138,13 @@ donate_now_button_quotaMOvement.addEventListener("click", function(){
     const donteAmountForQuotaMovement =  getInputFieldValueById('inputDonateQuotaMovement');
     
     if(donteAmountForQuotaMovement < 1 || isNaN(donteAmountForQuotaMovement) == true){
+        return;
+    }
+      
+    if(donteAmountForQuotaMovement > 0){
+        my_modal_4.showModal()
+     
+    }else{
         return;
     }
 
