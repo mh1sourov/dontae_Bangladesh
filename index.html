@@ -134,7 +134,7 @@
                     </div>
 
                     <div>
-                        <button id="donateNowButtonquotaMOvement" class="btn btn-wide w-full my-3 text-black font-bold bg-[#B4F461] donate_btn">Donate Now</button>
+                        <button  onclick="my_modal_4.showModal()"  id="donateNowButtonquotaMOvement" class="btn btn-wide w-full my-3 text-black font-bold bg-[#B4F461] donate_btn">Donate Now</button>
                     </div>
                   
             </div>
@@ -145,6 +145,23 @@
 
         </section>
     </main>
+
+    <!-- You can open the modal using ID.showModal() method -->
+<!-- <button class="btn" onclick="my_modal_4.showModal()">open modal</button> -->
+<dialog id="my_modal_4" class="modal">
+  <div class="modal-box w-sm lg:w-md max-h-sm">
+    <h3 class="text-xl font-bold text-center">Congrats!</h3>
+    <div class="flex justify-center items-center my-2"><img src="./assets/coin.png" alt=""></div>
+    <p class="text-center">You have donated for humankind</p>
+    <h3 class="text-lg font-bold text-center">Successfully!</h3>
+    <div class="modal-action">
+      <form method="dialog">
+        <!-- if there is a button, it will close the modal -->
+        <button class="btn">Close</button>
+      </form>
+    </div>
+  </div>
+</dialog>
     <footer></footer>
 <script src="./js/home.js"></script>
 <script src="./js/utilities.js"></script>

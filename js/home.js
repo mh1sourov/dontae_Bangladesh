@@ -116,7 +116,7 @@ donate_now_button_feni.addEventListener("click", function(){
 
 
 
-// functionality for quota feminin section
+// functionality for quota section
 
 const donate_now_button_quotaMOvement = document.getElementById("donateNowButtonquotaMOvement");
 donate_now_button_quotaMOvement.addEventListener("click", function(){
@@ -126,7 +126,7 @@ donate_now_button_quotaMOvement.addEventListener("click", function(){
     if(donteAmountForQuotaMovement < 1 || isNaN(donteAmountForQuotaMovement) == true){
         return;
     }
-    
+
     let fundAmountQuotaMovement = getFundAmountById("totalFundOfQuotaMovement");
    
     
